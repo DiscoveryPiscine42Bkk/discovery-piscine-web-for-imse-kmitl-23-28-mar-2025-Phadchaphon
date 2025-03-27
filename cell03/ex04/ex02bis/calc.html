@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- โหลด jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <h1>Calculator</h1>
+        <form id="calcForm">
+          <input type="text" id="num1" required />
+          <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+          <input type="text" id="num2" required />
+          <input type="submit" value="Calculate" />
+        </form>
+        <p>Result: <span id="result"></span></p>
+      </div>
+    </div>
+    <script>
+        // แจ้งเตือนทุก 30 วินาที
+        setInterval(function () {
+          alert("Please, use me...");
+        }, 30000);
+  
+        $(document).ready(function () {
+          // ฟังก์ชันคำนวณ
+          $("#calcForm").submit(function (event) {
+            event.preventDefault(); // ป้องกันไม่ให้ฟอร์มรีเฟรชหน้าเว็บ
+  
+            // รับค่าจาก input โดยใช้ jQuery
+            const num1 = parseFloat($("#num1").val());
+            const num2 = parseFloat($("#num2").val());
+            const operator = $("#operator").val();
+            let ans = 0;
+  
+            // ตรวจสอบค่าเป็นตัวเลข
+            if (isNaN(num1) || isNaN(num2)) {
+              console.log("Error :(");
+              alert("Error :(");
+              return;
+            }
+  
+            // ตรวจสอบค่าเป็นค่าลบ
+            if (num1 < 0 || num2 < 0) {
+              console.log("Error :(");
+              alert("Error :(");
+              return;
+            }
+  
+            // คำนวณตามตัวดำเนินการ
+            switch (operator) {
+              case "+":
+                ans = num1 + num2;
+                break;
+              case "-":
+                ans = num1 - num2;
+                break;
+              case "*":
+                ans = num1 * num2;
+                break;
+              case "/":
+                if (num2 === 0) {
+                  ans = "Error: Division by zero";
+                } else {
+                  ans = num1 / num2;
+                }
+                break;
+              case "%":
+                ans = num1 % num2;
+                break;
+              default:
+                ans = "Invalid operator";
+                break;
+            }
+  
+            // แสดงผลลัพธ์
+            if (isNaN(ans)) {
+              console.log("It’s over 9000!");
+              alert("It’s over 9000!");
+            } else {
+              console.log(ans);
+              alert(ans);
+              $("#result").text(ans); // แสดงผลลัพธ์ใน <span id="result">
+            }
+          });
+        });
+      </script>
+    </body>
+  </html>
