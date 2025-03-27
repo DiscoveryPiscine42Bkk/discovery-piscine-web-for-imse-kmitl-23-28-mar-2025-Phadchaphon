@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Akatab&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Akatab', sans-serif;
+    background-color: #F6F3EE;
+    color: #3D2F2B;}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #3D2F2B;
+    padding: 25px;
+    text-align: center;}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "Garamond", serif;
+    color: #F6F3EE;
+    font-size: 22px;
+}
+
+section {
+    padding: 50px 20px;
+    height: auto;
+    text-align: center;
+}
+.ABOUTME{
+    margin-top: 80px; 
+    font-weight: bolder;}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.about-left, .about-right {
+    width: 35%;
+    text-align: left;
+}
+
+.about-left h2, .about-right h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.about-left p, .about-right p {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.about-center {
+    text-align: center;
+    padding-top: 40px; 
+}
+
+.about-center img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.name {
+    background-color: #3D2F2B;
+    color: white;
+    font-family: 'Akatab', sans-serif;
+    padding: 15px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#achievements {
+    background-color: #4b3d39;
+    padding: 60px 0;
+    text-align: center;
+    color: #F6F3EE;
+}
+
+.achievements {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.SCORPnSE {
+    width: 45%;
+    text-align: center;
+}
+
+.SCORPnSE img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.SCORPnSE h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.SCORPnSE p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #4a3b2f;
+    text-align: center;
+}
+
+.links img {
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}

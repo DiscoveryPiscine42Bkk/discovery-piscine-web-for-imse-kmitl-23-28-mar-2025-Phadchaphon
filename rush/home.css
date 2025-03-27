@@ -1,0 +1,38 @@
+body {
+    font-family: 'Georgia', 'Times New Roman';
+    background-color: #e7dfd8;
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;}
+
+.frame {
+   border: 2px solid #000000; 
+   padding: 200px 450px;
+   background-color: #e7dfd8;
+   margin-top: 50px;
+   width: 350px;
+   max-width: 90;}
+
+p {
+    font-size: 22px;
+    margin-bottom: 40px;}
+
+.buttonlink {
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;}
+
+.btn {
+    background-color: #b7957f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;}
+
+.btn:hover {background-color: #6d3914;}
